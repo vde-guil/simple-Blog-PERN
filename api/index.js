@@ -1,0 +1,51 @@
+require('dotenv').config();
+const express = require('express');
+const router = require('./app/router');
+const cors = require('cors');
+
+const app = express();
+const port = process.env.PORT || 5000;
+
+app.use(express.json());
+
+app.use(cors());
+app.use('/v1', router);
+
+const expressSwagger = require('express-swagger-generator')(app);
+
+let options = {
+    swaggerDefinition: {
+        info: {
+            description: 'Oblog REST API - blogging app api',
+            title: 'Oblog',
+            version: '1.0.0',
+        },
+        host: process.env.URL ||"localhost:"+port,
+        basePath: '/v1',
+        produces: [
+            "application/json",
+        ],
+        consumes: [
+            "application/json",
+        ],
+        schemes: ['http', 'https'],
+        securityDefinitions: {
+            JWT: {
+                // type: 'apiKey',
+                // in: 'header',
+                // name: 'Authorization',
+                // description: "",
+            }
+        }
+    },
+    basedir: __dirname, //app absolute path
+    files: [
+        './app/models/*.js',
+        './app/router.js'
+        ] //Path to the API handle folder
+};
+expressSwagger(options)
+
+app.listen(port, () => {
+    console.log("listening http://localhost:" + port);
+});

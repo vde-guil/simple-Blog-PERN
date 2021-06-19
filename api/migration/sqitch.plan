@@ -1,0 +1,5 @@
+%syntax-version=1.0.0
+%project=oblog
+
+init 2021-03-31T09:19:23Z Valentin de Guillebon <valentin.de.guillebon@gmail.com> # initialisation sqitch et creation relations post et category
+better_post 2021-04-02T08:51:16Z Valentin de Guillebon <valentin.de.guillebon@gmail.com> # ajout d une vue pour post afin d'avoir un champs supplementaire
