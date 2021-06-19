@@ -16,8 +16,8 @@ const expressSwagger = require('express-swagger-generator')(app);
 let options = {
     swaggerDefinition: {
         info: {
-            description: 'Oblog REST API - blogging app api',
-            title: 'Oblog',
+            description: 'blog REST API - blogging app api',
+            title: 'blog',
             version: '1.0.0',
         },
         host: process.env.URL ||"localhost:"+port,
@@ -47,5 +47,5 @@ let options = {
 expressSwagger(options)
 
 app.listen(port, () => {
-    console.log("listening http://localhost:" + port);
+    console.log(`listening to ${process.env.URL || "http://localhost:" + port}`);
 });

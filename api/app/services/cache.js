@@ -1,6 +1,12 @@
 const redis = require('redis');
 
-const client = redis.createClient();
+let client;
+// we check if we are in production or in local development
+if (process.env.REDIS_URL) {
+    client = redis.createClient(process.env.REDIS_URL);
+} else {
+    client = redis.createClient();
+}
 
 const PREFIX = 'blog:';
 const PEREMPTION = 60*30; //30MINUTES
@@ -34,7 +40,7 @@ const cache = async (req, res, next) => {
 
     
     const url = PREFIX + req.url;
-
+    console.log(url);
     if (await asyncClient.exists(url)) {
         // si les donnees sont presentes dans le cache
         //on recupere dans le cache
