@@ -47,6 +47,8 @@ const cache = async (req, res, next) => {
         const cachedValue = await asyncClient.get(url);
 
         //la cachedValue est une string Json, pas un objet js
+        cachedValue = cachedValue.trim();
+
         const value = JSON.parse(cachedValue)
 
         res.json(value);
