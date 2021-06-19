@@ -30,7 +30,7 @@ let options = {
         consumes: [
             "application/json",
         ],
-        schemes: ['http', 'https'],
+        schemes: ['https'],
         securityDefinitions: {
             JWT: {
                 // type: 'apiKey',
