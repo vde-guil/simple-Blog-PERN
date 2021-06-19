@@ -13,6 +13,8 @@ app.use('/v1', router);
 
 const expressSwagger = require('express-swagger-generator')(app);
 
+console.log(__dirname);
+
 let options = {
     swaggerDefinition: {
         info: {
@@ -40,7 +42,7 @@ let options = {
     },
     basedir: __dirname, //app absolute path
     files: [
-        './app/models/*.js',
+        './app/model/*.js',
         './app/router.js'
         ] //Path to the API handle folder
 };

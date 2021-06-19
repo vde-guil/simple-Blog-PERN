@@ -1,0 +1,54 @@
+
+### POST NOT WORKING
+
+POST https://blog-api-vde-guil.herokuapp.com/v1/posts
+Content-Type: application/json
+
+{
+    "title": "Angular c'est peu ou prou le feu.",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis orci quis justo cursus pretium.",
+    "content": "Angular c'est peu ou prou le feu. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "category_id": 2
+}
+
+### POST WORKING
+
+POST https://blog-api-vde-guil.herokuapp.com/v1/posts
+Content-Type: application/json
+
+{
+    "title": "Proutasse autre2",
+    "slug": "proutasse-ou-autre2",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis orci quis justo cursus pretium.",
+    "content": "Angular c'est peu ou prou le feu. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "category_id": 58
+}
+
+### GET NOT WORKING 404
+
+GET https://blog-api-vde-guil.herokuapp.com/v1/posts/1caca
+
+### GET WORKING
+
+GET https://blog-api-vde-guil.herokuapp.com/v1/posts/
+
+### GET WORKING
+
+GET https://blog-api-vde-guil.herokuapp.com/v1/categories
+
+### GET WORKING
+
+GET https://blog-api-vde-guil.herokuapp.com/v1/posts/category/12
+
+### POST WORKING on deployed app on heroku
+
+POST https://blog-api-vde-guil.herokuapp.com/v1/posts
+Content-Type: application/json
+
+{
+    "title": "autre C'est le pas le feu2",
+    "slug": "autre-c-est-peu-ou-prou-le-feu2",
+    "excerpt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis orci quis justo cursus pretium.",
+    "content": "Angular c'est peu ou prou le feu. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis orci quis justo cursus pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis orci quis justo cursus pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis orci quis justo cursus pretium. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus quis orci quis justo cursus pretium.",
+    "category_id": 15
+}
