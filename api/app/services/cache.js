@@ -44,7 +44,7 @@ const cache = async (req, res, next) => {
     if (await asyncClient.exists(url)) {
         // si les donnees sont presentes dans le cache
         //on recupere dans le cache
-        const cachedValue = await asyncClient.get(url);
+        let cachedValue = await asyncClient.get(url);
 
         //la cachedValue est une string Json, pas un objet js
         cachedValue = cachedValue.trim();
