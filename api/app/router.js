@@ -52,11 +52,7 @@ router.get('^/posts/category/:id([0-9]+$)', cache, postController.getPostsFromCa
    * 
    * @route POST /posts
    * @group Posts
-   * @param {string} slug.body.required - url 
-   * @param {string} title.body.required - title of the post 
-   * @param {string} excerpt.body.required - excerpt of the post 
-   * @param {string} content.body.required - content of the post 
-   * @param {integer} category_id.body.required - category id 
+   * @param {object} req.body - example: { "title": "", "slug": "", "excerpt": "", "content": "", "category_id": id}
    * @return {Post.model} 200 - post response
    *  
    */
