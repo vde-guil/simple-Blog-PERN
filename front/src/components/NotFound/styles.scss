@@ -1,0 +1,17 @@
+@use 'src/styles/vars';
+
+.not-found {
+  font-size: vars.$gutter * 5;
+  margin: vars.$gutter;
+  text-align: center;
+  color: vars.$title-color;
+  font-family: vars.$title-font;
+  font-weight: vars.$title-font-weight;
+  
+  &-message {
+    font-size: vars.$gutter;
+    a {
+      color: vars.$primary-color
+    }
+  }
+}

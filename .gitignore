@@ -1,2 +1,10 @@
 api/node_modules
 api/.env
+
+front/node_modules/
+front/dist/
+
+front/.DS_Store
+front/Thumbs.db
+
+front/yarn-error.log
