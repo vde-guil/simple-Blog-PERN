@@ -1,6 +1,44 @@
 # simple-Blog-PERN
 
 simple blog created with postgres-express-react-node.
+You can try this project out at the following [url](https://simple-blog-pern.vercel.app/)
+
+## Front
+
+### Stack
+
+- NodeJS 15
+- yarn
+- react 17
+
+### Installation
+
+Clone the repo locally
+
+```bash
+git clone <repo url>
+```
+
+go into the clone directory then go into the front subirectory
+
+```bash
+cd <repo url>/front/
+```
+
+install the dependencies
+
+```bash
+yarn
+```
+
+to start the project locally type
+
+```bash
+yarn start
+```
+
+the project will be available at the following url ```http://localhost:8080```.
+
 
 ## API
 
